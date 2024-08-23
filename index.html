@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La paga_de_Passation_VUMA_Fuel_Sensor</title>
+    <link rel="icon" href="logof.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2>La paga de Passation VUMA Fuel Sensor</h2>
+    <form id="passationForm">
+        <div class="shift">
+            <label for="date" class="dates">Date:</label>
+            <input type="date" id="date" name="date" class="datess" required>
+        </div>
+
+        <div class="image">
+            <img src="logof.jpg" alt="VUMA">
+        </div>
+        
+        <div class="shift">
+            <label for="operator" class="operators">Opérateur:</label>
+            <select id="operator" name="operator" required>
+                <option value="Janvier Manandahy">Janvier Manandahy</option>
+                <option value="Mahandry">Mahandry</option>
+                <option value="Elios">Elios</option>
+                <option value="Jocin">Jocin</option>
+            </select>
+     
+            <label for="shift" class="shifts">Shift:</label>
+            <select id="shift" name="shift" required>
+                <option value="Day">Day</option>
+                <option value="Night">Night</option>
+            </select>
+        </div>
+        
+        <div class="label">
+            <label for="entry" class="labels">Entrée:</label>
+            <input type="text" id="entry" name="entry" class="inputs"  required>
+
+            <label for="exit" class="labels">Sortie:</label>
+            <input type="text" id="exit" name="exit" class="inputs" required>
+        </div>
+
+        <label for="observations" class="obseva">Observations</label>
+        <textarea id="observations" name="observations" class="obsevas" required></textarea>
+
+        <div class="buttons">
+            <button type="button" onclick="addEntry()">Ajouter</button>
+            <button type="button" onclick="searchEntry()">Rechercher</button>
+        </div>
+    </form>
+
+    <h3>Résultats</h3>
+    <table id="resultsTable">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Opérateur</th>
+                <th>Shift</th>
+                <th>Entrée</th>
+                <th>Sortie</th>
+                <th>Observations</th>
+                <th>Actions</th> <!-- Action Column -->
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Results will appear here -->
+        </tbody>
+    </table>
+
+    <div class="download-buttons">
+        <button onclick="downloadPDF()">Télécharger PDF</button>
+        <button onclick="downloadExcel()">Télécharger Excel</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</body>
+</html>
+
+    
